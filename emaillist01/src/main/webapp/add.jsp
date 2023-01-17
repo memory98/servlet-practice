@@ -15,5 +15,4 @@
 	
 	new EmaillistDao().insert(vo);
 	
-	response.sendRedirect("/emaillist01");
 %>
