@@ -34,7 +34,7 @@ public class EmaillistServlet extends HttpServlet {
 			
 			new EmaillistDao().insert(vo);
 			
-			response.sendRedirect("/emaillist02/el");
+			response.sendRedirect(request.getContextPath() + "/el");
 		} else {
 			List<EmaillistVo> list = new EmaillistDao().findAll();
 			request.setAttribute("list", list);
