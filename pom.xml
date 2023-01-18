@@ -4,12 +4,24 @@
 	<artifactId>servlet-practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-		
 	<modules>
-	<module>helloweb</module>
-	<module>emaillist01</module>
-	<module>guestbook01</module>
-	<module>emaillist02</module>
-	<module>guestbook02</module>
+		<module>helloweb</module>
+		<module>emaillist01</module>
+		<module>guestbook01</module>
+		<module>emaillist02</module>
+		<module>guestbook02</module>
 	</modules>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>${tomcat.deploy.url}</url>
+					<server>tomcat-douzone2023</server>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
