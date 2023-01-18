@@ -10,7 +10,7 @@ public class GuestbookDaoTest {
 //		testInsert();
 //		testFindAll();
 //		testDelete(2L);
-		testFind(3L);
+//		testFind(3L);
 	}
 	
 	
@@ -31,14 +31,4 @@ public class GuestbookDaoTest {
 		dao.insert(vo);
 	}
 	
-	private static void testDelete(Long no) {
-		GuestbookDao dao = new GuestbookDao();
-		dao.delete(no);
-	}
-	
-	private static void testFind(Long no) {
-		GuestbookDao dao = new GuestbookDao();
-		GuestbookVo vo = dao.find(no);
-		System.out.println(vo);
-	}
 }
