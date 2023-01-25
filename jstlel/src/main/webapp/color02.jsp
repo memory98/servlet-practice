@@ -11,10 +11,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>HSTL Test : forEach</h1>
-<c:forEach items="${list }" var="vo" varStatus="status">
-   <h1>[${status.index}:${status.count}] ${vo.no} : ${vo.name }</h1>
-</c:forEach>
-
+	<c:choose>
+		<c:when test='${param.color == "red"}'>
+			<h1 style="color:red">hello world</h1>
+		</c:when>
+		<c:when test="${param.color=='blue'}">
+			<h1 style="color:blue">hello world</h1>
+			</c:when>
+		<c:when test="${param.color=='green'}">
+			<h1 style="color:green">hello world</h1>
+			</c:when>
+		<c:otherwise>
+			<h1>hello world</h1>
+			</c:otherwise>	
+	</c:choose>
 </body>
 </html>
